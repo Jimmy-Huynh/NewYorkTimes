@@ -1,16 +1,28 @@
 package com.tvnsoftware.newyorktimes.model;
 
+import com.google.gson.annotations.SerializedName;
+import com.tvnsoftware.newyorktimes.Utils.Contant;
+
+import java.io.Serializable;
+
 /**
  * Created by TamHH on 6/26/2017.
  */
 
-public class Multimedia {
+public class Multimedia implements Serializable{
+    @SerializedName("width")
     public int width;
+    @SerializedName("url")
     public String url;
+    @SerializedName("rank")
     public int rank;
+    @SerializedName("height")
     public int height;
+    @SerializedName("subtype")
     public String subtype;
+    @SerializedName("legacy")
     public Legacy legacy;
+    @SerializedName("type")
     public String type;
 
     public Multimedia() {
@@ -25,7 +37,7 @@ public class Multimedia {
     }
 
     public String getUrl() {
-        return url;
+        return Contant.BASE_URL_IMAGES + url;
     }
 
     public void setUrl(String url) {

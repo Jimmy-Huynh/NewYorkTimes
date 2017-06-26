@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tvnsoftware.newyorktimes.MainActivity">
+    tools:context="com.tvnsoftware.newyorktimes.ArticleDetailActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -13,12 +13,14 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rcArticle"
+    <WebView
+        android:id="@+id/wv_detail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp"></WebView>
 </LinearLayout>

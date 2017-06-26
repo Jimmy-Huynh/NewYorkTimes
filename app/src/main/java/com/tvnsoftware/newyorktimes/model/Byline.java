@@ -1,11 +1,13 @@
 package com.tvnsoftware.newyorktimes.model;
 
+import java.io.Serializable;
+
 /**
  * Created by TamHH on 6/23/2017.
  */
 
-class Byline {
-    //    private List<object> person;
+public class Byline implements Serializable {
+
     private String original;
     private String organization;
 

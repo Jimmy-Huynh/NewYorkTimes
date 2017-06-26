@@ -12,16 +12,16 @@ import java.util.List;
 public class Doc implements Serializable {
     @SerializedName("web_url")
     private String webUrl;
+    @SerializedName("snippet")
     private String snippet;
     @SerializedName("lead_paragraph")
     private String leadParagraph;
-    //    private object abstracts;
-//    private object print_page;
-//    private List<object> blog;
+    @SerializedName("source")
     private String source;
+    @SerializedName("multimedia")
     private List<Multimedia> multimedia;
-    private Headline headline;
-    //    private List<object> keywords;
+//    private Headline headline;
+
     @SerializedName("pub_date")
     private String pubDate;
     @SerializedName("document_type")
@@ -32,14 +32,13 @@ public class Doc implements Serializable {
     private String sectionName;
     @SerializedName("subsection_name")
     private String subsectionName;
-    private Byline byline;
+//    private Byline byline;
     @SerializedName("type_of_material")
     private String typeOfMaterial;
     @SerializedName("_id")
     private String id;
     @SerializedName("word_count")
     private int wordCount;
-//    private object slideshow_credits;
 
     public Doc() {
     }
@@ -76,13 +75,6 @@ public class Doc implements Serializable {
         this.source = source;
     }
 
-    public Headline getHeadline() {
-        return headline;
-    }
-
-    public void setHeadline(Headline headline) {
-        this.headline = headline;
-    }
 
     public String getPubDate() {
         return pubDate;
@@ -124,13 +116,7 @@ public class Doc implements Serializable {
         this.subsectionName = subsectionName;
     }
 
-    public Byline getByline() {
-        return byline;
-    }
 
-    public void setByline(Byline byline) {
-        this.byline = byline;
-    }
 
     public String getTypeOfMaterial() {
         return typeOfMaterial;
